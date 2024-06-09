@@ -69,6 +69,7 @@ let getProto = (arr, proto) => {
         for (let key in product) {
             newProduct[key] = product[key];
         }
+        console.log(newProduct);
         return newProduct;
     });
 }
@@ -89,7 +90,7 @@ arr.forEach(categoryArray => {
     
     categoryArray.forEach(obj => {
         categoryArr += `
-        <div class="category__item">
+        <div class="category__item ${categoryArray[0].category}">
             <div class="category__image">
                 <img src="images/${obj.type}.svg" alt="${obj.type}">
             </div>
